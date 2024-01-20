@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote notes</title>
+    <link rel="stylesheet" href="styles/resultsstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" >
+                <img src="images/votenotes_logo.jpeg" alt="Logo">
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <a href="otherresources.html">Other resources</a>
+            <a href="aboutus.html">About us</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <form action="raceform.php">
+
+                <div class="dropdown">
+                    <button class="dropbtn">All races</button>
+                    <div class="dropdown-content">
+                        <a href="#">Governor</a>
+                        <a href="#">Senator</a>
+                        <a href="#">Congressman</a>
+                        <a href="#">Presidential</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">All issues</button>
+                    <div class="dropdown-content">
+                        <a href="#">Black Lives Matter</a>
+                        <a href="#">LGBTQ+</a>
+                        <a href="#">Gun control</a>
+                        <a href="#">Abortion</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">California</button>
+                </div>
+            </form>
+
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th class="first-column"> </th>
+                        <th>Abortion rights</th>
+                        <th>Gun control</th>
+                        <th>Black lives matter</th>
+                        <th>LGBTQ+ rights</th>
+                        <th>Green bills</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="6" class="subsection-header"><i class='bx bxs-chevron-down' ></i> Governor</th>
+                    </tr>
+                    <tr>
+                        <td>Candidate 1</td>
+                        <td class="pro">Pro</td>
+                        <td class="anti">Anti</td>
+                        <td class="unknown">?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
