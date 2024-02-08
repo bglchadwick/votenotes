@@ -26,57 +26,53 @@
     
     <div class="container">
         <div class="content">
-            <form action="raceform.php">
-
-                <div class="dropdown">
-                    <button class="dropbtn">All races</button>
-                    <div class="dropdown-content">
-                        <a href="#">Governor</a>
-                        <a href="#">Senator</a>
-                        <a href="#">Congressman</a>
-                        <a href="#">Presidential</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">All issues</button>
-                    <div class="dropdown-content">
-                        <a href="#">Black Lives Matter</a>
-                        <a href="#">LGBTQ+</a>
-                        <a href="#">Gun control</a>
-                        <a href="#">Abortion</a>
-                    </div>
-                </div>
-
                 <div class="dropdown">
                     <button class="dropbtn">California</button>
                 </div>
-            </form>
 
             <table class="results-table">
                 <thead>
                     <tr>
-                        <th class="first-column"> </th>
+                        <th class="name-column"> </th>
+                        <th class="party-column"></th>
                         <th>Abortion rights</th>
                         <th>Gun control</th>
                         <th>Black lives matter</th>
                         <th>LGBTQ+ rights</th>
                         <th>Green bills</th>
+                    </tr>
                 </thead>
-                <tbody>
+                <tbody id="governor-table-body">
                     <tr>
-                        <th colspan="6" class="subsection-header"><i class='bx bxs-chevron-down' ></i> Governor</th>
+                        <th colspan="7" class="subsection-header"><i class='bx bxs-chevron-down' ></i>Governor</th>
                     </tr>
                     <tr>
-                        <td>Candidate 1</td>
+                        <td class="name-column">Mike Johnson</td>
+                        <td class="republican">R</td>
                         <td class="pro">Pro</td>
+                        <td class="no-comment">Eh</td>
+                        <td class="neutral">?</td>
                         <td class="anti">Anti</td>
-                        <td class="unknown">?</td>
+                        <td class="pro">Pro</td>
+                    </tr>
+                </tbody>
+                <tbody id="senator-table-body">
+                    <tr>
+                        <th colspan="7" class="subsection-header"><i class='bx bxs-chevron-down' ></i>Senator</th>
+                    </tr>
+                    <tr>
+                        <td class="name-column">Big Mac</td>
+                        <td class="democrat">D</td>
+                        <td class="pro">Pro</td>
+                        <td class="no-comment">Eh</td>
+                        <td class="neutral">?</td>
+                        <td class="anti">Anti</td>
+                        <td class="pro">Pro</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

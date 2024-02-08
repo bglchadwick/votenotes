@@ -74,9 +74,10 @@
     height: 100%;
     background: transparent;
     padding: 40px;
+    padding-top: 0px;
     color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -90,12 +91,14 @@
     min-width: 100px;
     border-radius: 10px;
     border: 2px solid black;
+    margin-bottom: 0;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
     margin-right: 20px;
+    margin-bottom: 0;
 }
 
 .dropdown:last-child {
@@ -139,11 +142,17 @@
     background-color: transparent;
 }
 
+.results-table td {
+    vertical-align: middle;
+}
+
 .results-table {
     width: 100%; 
     border-collapse: separate;
     border-spacing: 20px; 
     text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
 }
 
 .results-table th {
@@ -151,19 +160,22 @@
     padding: 10px;
 }
 
-.results-table .first-column {
+.results-table .name-column {
     width: 100px;
-}
-
-.results-table td {
-    border-radius: 10px; 
-    padding: 20px; 
-    color: black; 
     font-size: 16px;
+    padding: 5px;
 }
 
-.results-table th:not(:first-child),
-.results-table td:not(:first-child) {
+.results-table .party-column {
+    width: 40px;
+}
+
+.results-table tr td:first-child {
+    text-align: left;
+}
+
+.results-table th:not(:first-child):not(.party-column),
+.results-table td:not(:first-child):not(.democrat):not(.republican){
     width: 16%; 
 }
 
@@ -177,22 +189,76 @@
 
 .subsection-header i,
 .subsection-header img {
-    margin-right: 5px; 
+    margin-right: 8px; 
     height: 20px;
     vertical-align: middle;
 }
 
-.pro {
-    background-color: blue; 
+.republican {
+    background-color: #F60A0A;
     color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+.democrat {
+    background-color: #1F83EE;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+.pro {
+    background-color: #1F83EE; 
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    height: 40px;
 }
 
 .anti {
-    background-color: red;
+    background-color: #F60A0A;
     color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    height: 40px;
 }
 
-.unknown {
-    background-color: yellow;
-    color: black; 
+.neutral {
+    background-color: rgb(230, 230, 8);
+    color: white; 
+    border-radius: 10px;
+    font-size: 16px;
+    height: 40px;
+}
+
+.no-comment {
+    background-color: grey;
+    color: white; 
+    border-radius: 10px;
+    font-size: 16px;
+    height: 40px;
+}
+
+.rotate-icon {
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease;
+}
+
+.hidden {
+    display: none;
 }
